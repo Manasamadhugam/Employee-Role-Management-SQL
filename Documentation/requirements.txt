@@ -1,0 +1,62 @@
+# PROJECT REQUIREMENTS
+
+## 1. Project Title
+Employee Role Management System
+
+## 2. Project Objective
+To develop a relational database system using MySQL to manage employee information, departments, job roles, and salary details efficiently.
+
+## 3. Functional Requirements
+
+1. Create and manage employee records.
+2. Store department information.
+3. Maintain employee job roles.
+4. Retrieve all employee records.
+5. Search employees by Employee ID.
+6. Retrieve employees department-wise.
+7. Filter employees based on minimum salary.
+8. Maintain employee salary history.
+9. Prevent insertion of negative salaries.
+10. Prevent employee deletion through a trigger.
+
+## 4. Non-Functional Requirements
+
+1. Data Integrity – Maintain accurate data using constraints.
+2. Performance – Improve query performance using indexes.
+3. Reliability – Manage operations using transactions.
+4. Maintainability – Organize SQL queries and database objects.
+
+## 5. Software Requirements
+
+- Operating System: Windows
+- Database: MySQL 8.0
+- Database Tool: MySQL Workbench
+- Query Language: SQL
+
+## 6. Hardware Requirements
+
+- Laptop or Desktop Computer
+- Minimum 4 GB RAM
+- Sufficient storage space
+
+## 7. Project Features
+
+- Database Creation
+- Table Creation
+- Data Insertion
+- SQL Queries
+- Joins
+- Views
+- Stored Procedures
+- Functions
+- Triggers
+- Indexes and EXPLAIN
+- Transactions
+
+## 8. Expected Outcome
+
+A relational database system that manages employee details, departments, job roles, and salary history while maintaining data integrity.
+
+## 9. Conclusion
+
+This project demonstrates practical knowledge of SQL and relational database management concepts using MySQL.

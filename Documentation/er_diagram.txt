@@ -1,0 +1,99 @@
+# ENTITY RELATIONSHIP DIAGRAM (ER DIAGRAM)
+
+## 1. Project Title
+Employee Role Management System
+
+## 2. Entities
+
+### DEPARTMENTS
+- dept_id (Primary Key)
+- dept_name
+
+### ROLES
+- role_id (Primary Key)
+- role_name
+
+### EMPLOYEES
+- emp_id (Primary Key)
+- emp_name
+- dept_id (Foreign Key)
+- role_id (Foreign Key)
+- salary
+
+### SALARY_HISTORY
+- history_id (Primary Key)
+- emp_id (Foreign Key)
+- old_salary
+- new_salary
+- change_date
+
+## 3. ER Diagram
+
+```text
++------------------+
+|   DEPARTMENTS    |
++------------------+
+| PK dept_id       |
+|    dept_name     |
++------------------+
+         |
+         | 1
+         |
+         | M
++------------------+
+|    EMPLOYEES     |
++------------------+
+| PK emp_id        |
+|    emp_name      |
+| FK dept_id       |
+| FK role_id       |
+|    salary        |
++------------------+
+         |
+         | 1
+         |
+         | M
++------------------+
+|  SALARY_HISTORY  |
++------------------+
+| PK history_id    |
+| FK emp_id        |
+|    old_salary    |
+|    new_salary    |
+|    change_date   |
++------------------+
+
++------------------+
+|      ROLES       |
++------------------+
+| PK role_id       |
+|    role_name     |
++------------------+
+         |
+         | 1
+         |
+         | M
+      EMPLOYEES
+```
+
+## 4. Relationships
+
+1. One department can have multiple employees.
+2. One role can be assigned to multiple employees.
+3. One employee can have multiple salary history records.
+
+## 5. Keys
+
+Primary Keys:
+- departments.dept_id
+- roles.role_id
+- employees.emp_id
+- salary_history.history_id
+
+Foreign Keys:
+- employees.dept_id
+- employees.role_id
+- salary_history.emp_id
+
+## 6. Conclusion
+The ER diagram represents the relationships between departments, roles, employees, and salary history.

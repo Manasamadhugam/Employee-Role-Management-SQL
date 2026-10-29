@@ -1,0 +1,69 @@
+# DATABASE DESIGN
+
+## 1. Project Title
+Employee Role Management System
+
+## 2. Database Name
+employee_role_management
+
+## 3. Introduction
+The Employee Role Management System is a relational database project developed using MySQL. It is designed to manage employee details, departments, job roles, and salary history.
+
+## 4. Database Tables
+
+### Table 1: Departments
+Purpose: Stores department information.
+
+| Column Name | Data Type | Constraint |
+|---|---|---|
+| dept_id | INT | Primary Key, Auto Increment |
+| dept_name | VARCHAR(100) | NOT NULL, UNIQUE |
+
+### Table 2: Roles
+Purpose: Stores employee job roles.
+
+| Column Name | Data Type | Constraint |
+|---|---|---|
+| role_id | INT | Primary Key, Auto Increment |
+| role_name | VARCHAR(100) | NOT NULL, UNIQUE |
+
+### Table 3: Employees
+Purpose: Stores employee information.
+
+| Column Name | Data Type | Constraint |
+|---|---|---|
+| emp_id | INT | Primary Key |
+| emp_name | VARCHAR | Employee Name |
+| dept_id | INT | Foreign Key |
+| role_id | INT | Foreign Key |
+| salary | DECIMAL | Employee Salary |
+
+### Table 4: Salary_History
+Purpose: Stores employee salary changes.
+
+| Column Name | Data Type | Constraint |
+|---|---|---|
+| history_id | INT | Primary Key, Auto Increment |
+| emp_id | INT | Foreign Key |
+| old_salary | DECIMAL(10,2) | Previous Salary |
+| new_salary | DECIMAL(10,2) | Updated Salary |
+| change_date | DATE | Salary Change Date |
+
+## 5. Relationships
+- Departments to Employees: One-to-Many.
+- Roles to Employees: One-to-Many.
+- Employees to Salary_History: One-to-Many.
+
+## 6. Constraints Used
+- PRIMARY KEY
+- FOREIGN KEY
+- NOT NULL
+- UNIQUE
+- CHECK
+
+## 7. Tools Used
+- MySQL 8.0
+- MySQL Workbench
+
+## 8. Conclusion
+The database is designed to organize employee records, department details, job roles, and salary history efficiently.
